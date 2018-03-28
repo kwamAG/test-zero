@@ -13,6 +13,7 @@
 		8E6DF056206BB16300B6D135 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E6DF054206BB16300B6D135 /* Main.storyboard */; };
 		8E6DF058206BB16300B6D135 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E6DF057206BB16300B6D135 /* Assets.xcassets */; };
 		8E6DF05B206BB16300B6D135 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E6DF059206BB16300B6D135 /* LaunchScreen.storyboard */; };
+		8E6DF063206BB4FD00B6D135 /* powerButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E6DF062206BB4FD00B6D135 /* powerButton@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8E6DF057206BB16300B6D135 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E6DF05A206BB16300B6D135 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E6DF05C206BB16300B6D135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E6DF062206BB4FD00B6D135 /* powerButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "powerButton@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				8E6DF04E206BB16300B6D135 /* AppDelegate.swift */,
 				8E6DF050206BB16300B6D135 /* art.scnassets */,
 				8E6DF052206BB16300B6D135 /* ViewController.swift */,
+				8E6DF062206BB4FD00B6D135 /* powerButton@2x.png */,
 				8E6DF054206BB16300B6D135 /* Main.storyboard */,
 				8E6DF057206BB16300B6D135 /* Assets.xcassets */,
 				8E6DF059206BB16300B6D135 /* LaunchScreen.storyboard */,
@@ -127,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E6DF051206BB16300B6D135 /* art.scnassets in Resources */,
+				8E6DF063206BB4FD00B6D135 /* powerButton@2x.png in Resources */,
 				8E6DF05B206BB16300B6D135 /* LaunchScreen.storyboard in Resources */,
 				8E6DF058206BB16300B6D135 /* Assets.xcassets in Resources */,
 				8E6DF056206BB16300B6D135 /* Main.storyboard in Resources */,
