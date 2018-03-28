@@ -11,7 +11,7 @@ import SceneKit
 import ARKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
-
+    
     @IBOutlet var sceneView: ARSCNView!
     
     override func viewDidLoad() {
@@ -35,45 +35,53 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     @objc
     func handleTap(gestureRecognize: UITapGestureRecognizer) {
+        // Create an image plane using a snapshot of the view
         let imagePlane = SCNPlane(width:sceneView.bounds.width / 6000,
-                                 height: sceneView.bounds.height / 6000)
+                                  height: sceneView.bounds.height / 6000)
         imagePlane.firstMaterial?.diffuse.contents = sceneView.snapshot()
         imagePlane.firstMaterial?.lightingModel = .constant
+        
+        // Create a plane and add it to the scene
+        let planeNode (geometry: imagePlane)
+        sceneView.scene.rootNode.addChildNode(planeNode)
+    }
     
-        func viewWillAppear(_ animated: Bool) {
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
-
+        
         // Run the view's session
         sceneView.session.run(configuration)
     }
     
-func viewWillDisappear(_ animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         // Pause the view's session
         sceneView.session.pause()
     }
     
-func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
-
+    
     // MARK: - ARSCNViewDelegate
     
-/*
-    // Override to create and configure nodes for anchors added to the view's session.
-    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        let node = SCNNode()
+    /*
+     // Override to create and configure nodes for anchors added to the view's session.
+     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
+     let node = SCNNode()
      
-        return node
-    }
-*/
+     return node
+     }
+     */
     
-    func session(_ session: ARSession, didFailWithError error: Error) {
+    f unc session(_ session: ARSession, didFailWithError error: Error) {
         // Present an error message to the user
         
     }
@@ -87,7 +95,7 @@ func didReceiveMemoryWarning() {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
     }
-
-    }
     
+}
+
 }
